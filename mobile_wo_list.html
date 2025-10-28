@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile - Lista WO</title>
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #ccc; margin: 0; display: flex; justify-content: center; }
+        .phone-frame { width: 390px; height: 700px; background-color: #F0F2F5; overflow-y: auto; box-shadow: 0 0 20px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
+        .header { background-color: #003366; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
+        .header h1 { font-size: 20px; margin: 0; }
+        .content-area { padding: 10px; flex-grow: 1; }
+        .wo-card { background-color: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-decoration: none; color: #333; display: block; }
+        .card-content { padding: 15px; }
+        .wo-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .badge-danger { background-color: #F44336; color: white; padding: 5px 10px; border-radius: 12px; font-size: 14px; }
+        .badge-warning { background-color: #FFC107; color: #333; padding: 5px 10px; border-radius: 12px; font-size: 14px; }
+        .location { border-top: 1px solid #E0E0E0; padding-top: 10px; margin-top: 10px; color: #007BFF; }
+        .navbar { background-color: white; padding: 15px 0; border-top: 1px solid #E0E0E0; display: flex; justify-content: space-around; }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="header">
+            <h1>I Miei WO (3)</h1>
+            <span>🔄</span>
+        </div>
+        <div class="content-area">
+            
+            <a href="mobile_wo_detail.html" class="wo-card" style="border-left: 8px solid #F44336;">
+                <div class="card-content">
+                    <div class="wo-header">
+                        <span style="font-size: 18px; font-weight: bold;">WO-105: Verifica Funi</span>
+                        <span class="badge-danger">URGENTE</span>
+                    </div>
+                    <p>Asset: T-0045 (Merlo ROTO)</p>
+                    <div class="location">📍 Cantiere Centrale, Arezzo</div>
+                </div>
+            </a>
+
+            <a href="mobile_wo_detail.html" class="wo-card" style="border-left: 8px solid #FFC107;">
+                <div class="card-content">
+                    <div class="wo-header">
+                        <span style="font-size: 18px; font-weight: bold;">WO-106: Tagliando 200h</span>
+                        <span class="badge-warning">IMMINENTE</span>
+                    </div>
+                    <p>Asset: M-0012 (Palfinger P200)</p>
+                    <div class="location">📍 Sede Principale</div>
+                </div>
+            </a>
+
+        </div>
+        <div class="navbar">
+            <span style="color: #003366; font-weight: bold;">WO</span>
+            <span>Asset</span>
+            <span>Profilo</span>
+        </div>
+    </div>
+</body>
+</html>
