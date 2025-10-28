@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMS - Gestione Flotta</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; display: flex; height: 100vh; }
+        .sidebar { width: 200px; background-color: #003366; color: white; display: flex; flex-direction: column; }
+        .sidebar h2 { text-align: center; padding: 20px 0; font-size: 24px; }
+        .nav-link { color: #aaaaaa; padding: 15px 20px; text-decoration: none; display: block; }
+        .nav-link.active { background-color: #004080; color: white; }
+        .main-content { flex-grow: 1; display: flex; flex-direction: column; }
+        .header { background-color: white; padding: 15px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; }
+        .header h1 { font-size: 20px; margin: 0; }
+        .content-area { padding: 20px; overflow-y: auto; }
+        .table-container { background-color: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #e9ecef; }
+        .badge { padding: 5px 10px; border-radius: 12px; font-size: 12px; }
+        .badge-success { background-color: #d4edda; color: #155724; }
+        .badge-warning { background-color: #fff3cd; color: #856404; }
+        .badge-danger { background-color: #f8d7da; color: #721c24; }
+        .btn-primary { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; text-decoration: none; }
+        .filters { margin-bottom: 20px; }
+        input, select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SOMS</h2>
+        <a href="web_dashboard.html" class="nav-link">Dashboard</a>
+        <a href="web_fleet.html" class="nav-link active">Gestione Flotta</a>
+        <a href="web_planning.html" class="nav-link">Pianificazione WO</a>
+        <a href="web_manuals.html" class="nav-link">Manuali OEM (AI)</a>
+        <a href="web_reports.html" class="nav-link">Reportistica</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Gestione Flotta</h1>
+            <a href="#" class="btn-primary">+ Nuovo Asset</a>
+        </div>
+        <div class="content-area">
+            <div class="filters">
+                <input type="text" placeholder="Cerca Marca/Modello...">
+                <select>
+                    <option>Filtra per Stato</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matricola</th>
+                            <th>Modello</th>
+                            <th>Stato (M2.2)</th>
+                            <th>Ore Lavoro (M2.3)</th>
+                            <th>Telemetria</th>
+                            <th>Prossima Manut. (M3.1)</th>
+                            <th>Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M-0012</td>
+                            <td>Palfinger P200</td>
+                            <td><span class="badge badge-success">Operativo</span></td>
+                            <td>195.5 h</td>
+                            <td style="color: #4CAF50;">📶 Attiva</td>
+                            <td style="color: #FF9800;">200h (Imminente)</td>
+                            <td><a href="web_asset_detail.html">Dettagli</a></td>
+                        </tr>
+                        <tr>
+                            <td>T-0045</td>
+                            <td>Merlo ROTO 38.16</td>
+                            <td><span class="badge badge-warning">In Manutenzione</span></td>
+                            <td>1250.0 h</td>
+                            <td style="color: #aaaaaa;">📶 Offline</td>
+                            <td>N/A (In corso)</td>
+                            <td><a href="web_asset_detail.html">Dettagli</a></td>
+                        </tr>
+                        <tr style="background-color: #fff0f0;">
+                            <td>S-0089</td>
+                            <td>Dieci Pegasus</td>
+                            <td><span class="badge badge-danger">SCADUTA</span></td>
+                            <td>510.2 h</td>
+                            <td style="color: #4CAF50;">📶 Attiva</td>
+                            <td style="color: #F44336;">500h (Superata)</td>
+                            <td><a href="web_asset_detail.html">Dettagli</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
