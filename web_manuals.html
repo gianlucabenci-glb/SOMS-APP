@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>SOMS - Manuali OEM</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f0f2f5; margin: 0; display: flex; height: 100vh; }
+        .sidebar { width: 200px; background-color: #003366; color: white; }
+        .sidebar h2 { text-align: center; padding: 20px 0; }
+        .nav-link { color: #aaaaaa; padding: 15px 20px; text-decoration: none; display: block; }
+        .nav-link.active { background-color: #004080; color: white; }
+        .main-content { flex-grow: 1; display: flex; flex-direction: column; }
+        .header { background-color: white; padding: 15px 20px; border-bottom: 1px solid #e0e0e0; }
+        .header h1 { font-size: 20px; margin: 0; }
+        .content-area { padding: 20px; overflow-y: auto; }
+        .card { background-color: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
+        .dropzone { border: 2px dashed #99c2ff; background-color: #eaf2ff; padding: 30px; text-align: center; color: #003366; flex-grow: 1; }
+        .btn-primary { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; }
+        th { background-color: #e9ecef; }
+        .badge-pending { background-color: #fff3cd; color: #856404; padding: 5px 10px; border-radius: 12px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SOMS</h2>
+        <a href="web_dashboard.html" class="nav-link">Dashboard</a>
+        <a href="web_fleet.html" class="nav-link">Gestione Flotta</a>
+        <a href="web_planning.html" class="nav-link">Pianificazione WO</a>
+        <a href="web_manuals.html" class="nav-link active">Manuali OEM (AI)</a>
+        <a href="web_reports.html" class="nav-link">Reportistica</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Libreria Manuali OEM e AI</h1>
+        </div>
+        <div class="content-area">
+            <div class="card">
+                <h3>Carica Nuovo Manuale (M1.1)</h3>
+                <div style="display: flex; gap: 20px;">
+                    <div>
+                        <p>1. Associa Modello</p>
+                        <select style="padding: 10px;"><option>Seleziona...</option></select>
+                    </div>
+                    <div style="flex-grow: 1;">
+                        <p>2. Carica File PDF</p>
+                        <div class="dropzone">Trascina il PDF qui</div>
+                    </div>
+                </div>
+                <div style="text-align: right; margin-top: 20px;">
+                    <button class="btn-primary">Avvia Elaborazione AI</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Coda di Elaborazione</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>File Caricato</th>
+                            <th>Modello Associato</th>
+                            <th>Stato AI</th>
+                            <th>Stato Piano (MMP)</th>
+                            <th>Azione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Reg_Controllo_Merlo.pdf</td>
+                            <td>Merlo ROTO 38.16</td>
+                            <td style="color: #4CAF50;">Completata</td>
+                            <td><span class="badge-pending">Da Validare</span></td>
+                            <td><a href="web_hitl.html">Vai a HITL (M1.3)</a></td>
+                        </tr>
+                        <tr>
+                            <td>Manuale_Dieci.pdf</td>
+                            <td>Dieci Pegasus</td>
+                            <td style="color: #007bff;">In Elaborazione (70%)</td>
+                            <td>In Attesa</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
