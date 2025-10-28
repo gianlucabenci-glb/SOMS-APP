@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile - Checklist</title>
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #ccc; margin: 0; display: flex; justify-content: center; }
+        .phone-frame { width: 390px; height: 700px; background-color: #FFF; overflow-y: auto; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .header { background-color: #003366; color: white; padding: 15px; display: flex; align-items: center; position: sticky; top: 0; }
+        .header h1 { margin: 0; font-size: 18px; }
+        .back-arrow { font-size: 24px; margin-right: 15px; text-decoration: none; color: white; }
+        .task-item { padding: 15px; border-bottom: 1px solid #E0E0E0; }
+        .task-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .ref-link { color: #007BFF; font-size: 14px; display: block; margin-bottom: 15px; }
+        .btn-toggle { padding: 10px 20px; border-radius: 10px; border: 2px solid; font-weight: bold; }
+        .btn-ok { border-color: #BDBDBD; background-color: #F0F2F5; color: #4CAF50; }
+        .btn-fail { border-color: #BDBDBD; background-color: #F0F2F5; color: #F44336; }
+        .btn-ok.active { background-color: #4CAF50; color: white; border-color: #388E3C; }
+        .btn-fail.active { background-color: #F44336; color: white; border-color: #D32F2F; }
+        .input-numeric { padding: 10px; border: 1px solid #BDBDBD; border-radius: 5px; width: 100px; }
+        .camera-icon { font-size: 24px; padding: 15px; border: 2px dashed #999; border-radius: 10px; background-color: #E0E0E0; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="header">
+            <a href="mobile_wo_detail.html" class="back-arrow">←</a>
+            <h1>Impianto Idraulico</h1>
+        </div>
+        
+        <div class="task-item">
+            <div class="task-header">
+                <strong>Controllo livello olio idraulico</strong>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-toggle btn-ok active">OK</button>
+                    <button class="btn-toggle btn-fail">FAIL</button>
+                </div>
+            </div>
+            <a href="#" class="ref-link">📄 Rif. Manuale Par. 6.8</a>
+        </div>
+
+        <div class="task-item">
+            <strong>Verifica pressione massima impianto</strong>
+            <a href="#" class="ref-link">📄 Rif. Manuale Par. 6.6</a>
+            <p style="font-size: 14px; color: #666;">(Target: 205-215 Bar)</p>
+            <div>
+                <input type="number" class="input-numeric" value="210"> Bar
+            </div>
+        </div>
+
+        <div class="task-item">
+            <div class="task-header">
+                <strong>Controllo integrità tubi flessibili</strong>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-toggle btn-ok">OK</button>
+                    <button class="btn-toggle btn-fail active">FAIL</button>
+                </div>
+            </div>
+            <a href="#" class="ref-link">📄 Rif. Manuale Par. 6.5</a>
+            <p style="color: #F44336; font-size: 14px;">Richiesta Foto per FAIL:</p>
+            <div class="camera-icon">📷</div>
+        </div>
+
+    </div>
+</body>
+</html>
