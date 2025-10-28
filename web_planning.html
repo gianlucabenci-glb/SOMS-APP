@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>SOMS - Pianificazione WO</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f0f2f5; margin: 0; display: flex; height: 100vh; }
+        .sidebar { width: 200px; background-color: #003366; color: white; }
+        .sidebar h2 { text-align: center; padding: 20px 0; }
+        .nav-link { color: #aaaaaa; padding: 15px 20px; text-decoration: none; display: block; }
+        .nav-link.active { background-color: #004080; color: white; }
+        .main-content { flex-grow: 1; display: flex; flex-direction: column; }
+        .header { background-color: white; padding: 15px 20px; border-bottom: 1px solid #e0e0e0; }
+        .header h1 { font-size: 20px; margin: 0; }
+        .content-area { padding: 20px; overflow-y: auto; display: flex; gap: 20px; }
+        .column { background-color: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 20px; }
+        .col-wo-list { flex-basis: 40%; }
+        .col-schedule { flex-basis: 60%; }
+        .wo-card { padding: 15px; border-radius: 8px; margin-bottom: 15px; cursor: grab; }
+        .wo-card-danger { background-color: #fff0f0; border: 1px solid #F44336; }
+        .wo-card-warning { background-color: #fffbe6; border: 1px solid #FFC107; }
+        .schedule-row { display: flex; align-items: center; border-bottom: 1px solid #eee; padding: 10px 0; }
+        .technician-name { flex-basis: 30%; font-weight: bold; }
+        .schedule-slots { flex-basis: 70%; display: flex; gap: 10px; }
+        .slot { padding: 10px 15px; border-radius: 5px; font-size: 14px; }
+        .slot-booked { background-color: #2196F3; color: white; }
+        .slot-available { background-color: #f0f0f0; border: 1px dashed #ccc; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SOMS</h2>
+        <a href="web_dashboard.html" class="nav-link">Dashboard</a>
+        <a href="web_fleet.html" class="nav-link">Gestione Flotta</a>
+        <a href="web_planning.html" class="nav-link active">Pianificazione WO</a>
+        <a href="web_manuals.html" class="nav-link">Manuali OEM (AI)</a>
+        <a href="web_reports.html" class="nav-link">Reportistica</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Pianificazione e Assegnazione</h1>
+        </div>
+        <div class="content-area">
+            <div class="column col-wo-list">
+                <h3>WO da Assegnare (5)</h3>
+                
+                <div class="wo-card wo-card-danger">
+                    <p><strong>WO-105 (Scaduto) ⚠️</strong></p>
+                    <p>Asset: T-0045 (Merlo)<br>Tipo: Verifica Funi</p>
+                </div>
+
+                <div class="wo-card wo-card-warning">
+                    <p><strong>WO-106 (Imminente)</strong></p>
+                    <p>Asset: M-0012 (Palfinger)<br>Tipo: Tagliando 200h</p>
+                </div>
+            </div>
+            <div class="column col-schedule">
+                <h3>Calendario Tecnici (Oggi - 29 Ott)</h3>
+
+                <div class="schedule-row">
+                    <div class="technician-name">Mario Rossi</div>
+                    <div class="schedule-slots">
+                        <div class="slot slot-booked">WO-101</div>
+                        <div class="slot slot-available">Assegna qui</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="technician-name">Luigi Verdi</div>
+                    <div class="schedule-slots">
+                        <div class="slot slot-available" style="flex-grow: 1;">Disponibile</div>
+                    </div>
+                </div>
+
+                 <div class="schedule-row">
+                    <div class="technician-name">Officina Esterna</div>
+                    <div class="schedule-slots">
+                        <div class="slot slot-booked" style="background-color: #9E9E9E;">WO-103</div>
+                        <div class="slot slot-available">Assegna qui</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
