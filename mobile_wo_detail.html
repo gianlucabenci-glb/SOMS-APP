@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile - Dettaglio WO</title>
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #ccc; margin: 0; display: flex; justify-content: center; }
+        .phone-frame { width: 390px; height: 700px; background-color: #F0F2F5; overflow-y: auto; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .header { background-color: #003366; color: white; padding: 15px; display: flex; align-items: center; position: sticky; top: 0; }
+        .header h1 { margin: 0; font-size: 18px; }
+        .back-arrow { font-size: 24px; margin-right: 15px; text-decoration: none; color: white; }
+        .content-area { padding: 10px; }
+        .card { background-color: white; border-radius: 10px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .section-link { background-color: white; border-radius: 10px; padding: 20px 15px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: #333; }
+        .btn-block { width: 100%; padding: 15px; border: none; border-radius: 10px; font-weight: bold; color: white; font-size: 16px; margin-top: 10px; display: block; text-align: center; text-decoration: none; box-sizing: border-box; }
+        .btn-danger { background-color: #FF5722; }
+        .btn-disabled { background-color: #CCCCCC; }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="header">
+            <a href="mobile_wo_list.html" class="back-arrow">←</a>
+            <h1>WO-106: Tagliando 200h</h1>
+        </div>
+        <div class="content-area">
+            <div class="card">
+                <h2 style="font-size: 18px; margin-top: 0;">Palfinger P200 (M-0012)</h2>
+                <p>Ore Correnti: 195.5 h</p>
+            </div>
+
+            <p><strong>SEZIONI CHECKLIST (0/4)</strong></p>
+
+            <a href="mobile_checklist.html" class="section-link">
+                Controlli Generali
+                <span>(0/5) →</span>
+            </a>
+            
+            <a href="mobile_checklist.html" class="section-link">
+                Impianto Idraulico
+                <span>(0/3) →</span>
+            </a>
+
+            <div style="margin-top: 30px;">
+                <a href="mobile_anomaly.html" class="btn-block btn-danger">⚠️ Segnala Anomalia Imprevista</a>
+                <a href="mobile_closure.html" class="btn-block btn-disabled">Chiudi WO</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
